@@ -5,9 +5,9 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-  <title>life</title>
-  <meta name='description' content="테마는 Flexton <-- 이것을 사용하고 있습니다!">
-  <link rel='canonical' href="http://localhost:4000/category/life/">
+  <title>블로그 이전기</title>
+  <meta name='description' content="나는 원래 티스토리에서 개발 블로그를 운영했었다.그 블로그는 대학생때 첫 복수전공을 하던때 2018년부터 시작하고나서 직장인이 되고도 약 1년정도를 꾸준히 운영했었다.조회수는 누적 10만 이상이었고 최근에 이직을 한 후 포스팅을 하지 않았지만 지금도 매일 평균 100-200명의 사...">
+  <link rel='canonical' href="http://localhost:4000/2022/07/03/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EC%A0%84%EA%B8%B0/">
   <link rel='alternate' type='application/rss+xml' title='Henry의 블로그에 오신것을 환영합니다!' href="http://localhost:4000/feed.xml">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Volkhov:400,700" rel="stylesheet">
@@ -77,220 +77,173 @@
 </aside> <!-- /.c-sidebar -->
 
 <main class="c-content">
-  <header class="c-header">
-  <div class="c-header__box">
-    <div class="c-search">
-      <div class="c-search__box">
-        <label for="js-search-input" class="u-screen-reader-text">Search for Blog</label>
-        <input type="text" id="js-search-input" class="c-search__text" autocomplete="off" placeholder="Type to search...">
-        <div data-icon='ei-search' data-size='s'></div>
+  <article class="c-article">
+  <div class="c-article__content">
+    <header class="c-header u-hide u-no-margin-top">
+      <div class="c-header__box">
+        <div class="c-search u-full-width">
+          <div class="c-search__box">
+            <label for="js-search-input" class="u-screen-reader-text">Search for Blog</label>
+            <input type="text" id="js-search-input" class="c-search__text" autocomplete="off" placeholder="Type to search...">
+            <div data-icon='ei-search' data-size='s'></div>
+          </div>
+          <ul id="js-results-container" class="c-search-results-list"></ul>
+        </div>
       </div>
-      <ul id="js-results-container" class="c-search-results-list"></ul>
-    </div>
-    <div class="c-nav">
-      <ul class="c-nav__list u-lists-reset">
-        <li class="c-nav__item is-active">
-          <div data-icon='ei-pencil' data-size='s'></div> Posts</li>
-        <li class="c-nav__item">
-          <div data-icon='ei-star' data-size='s'></div> Categories</li>
-      </ul>
-    </div>
+    </header>
+    
+    <div class="c-article__image o-opacity" style="background-image: url( /images/4.jpg )"></div>
+    
+    <div class="c-wrap-content">
+      <header class="c-article__header">
+        <h1 class="c-article__title">블로그 이전기</h1>
+        <div class="c-article__date">
+          <span>2022, Jul 03</span>
+        </div>
+      </header>
+      <p>나는 원래 티스토리에서 개발 블로그를 운영했었다.<br />
+그 블로그는 대학생때 첫 복수전공을 하던때 2018년부터 시작하고나서 직장인이 되고도 약 1년정도를 꾸준히 운영했었다.
+조회수는 누적 10만 이상이었고 최근에 이직을 한 후 포스팅을 하지 않았지만 지금도 매일 평균 100-200명의 사람이 방문해주고있다.
+대딘한 블로그는 아니지만 나름대로 추억도 있고 별다른 문제는 없으나 블로그를 이전하려고 한다.</p>
+
+<hr />
+
+<h4 id="블로그를-이전하는-이유">블로그를 이전하는 이유</h4>
+
+<h6 id="1-커스텀의-한계">1. 커스텀의 한계</h6>
+
+<p>티스토리 블로그를 운영하면서 나만의 사이트를 운영하는 느낌이 들지 않았다.
+티스토리에서 제공하는 테마중에 그나마 마음이 가는것을 몇번 골라서 바꿔가며 운영했지만 하나같이 어딘가 석연치 않은 테마들 뿐이었다.
+물론 웹개발에 능통하신 분들은 그마저도 커스텀이 가능할수도 있지만 기본적으로 난 웹 개발자가 아니기때문에 그정도 능력이 되지않았다.</p>
+
+<h6 id="2-개발자라면-깃헙이지">2. 개발자라면 깃헙이지!</h6>
+
+<p>사실 직장인이 되고나서 프라이빗 repository 외에 잘 사용하지 않다보니 깃헙 잔디밭이 멸망해버렸다 ㅜㅜ
+거의 불모지 수준으로 사라진 잔디밭을 보면 마음이 아플때가 있었다.
+그래서 이왕 블로그를 이전할거라면 깃헙 io 를 사용해서 포스팅도 하고 잔디도 심는 일석 이조의 효과를 가져올수 있지 않을까! 하는 마음에 선택한것도 있다 ㅎㅎ</p>
+
+<h6 id="3-낮은-퀄리티의-게시글">3. 낮은 퀄리티의 게시글</h6>
+
+<p>이게 블로그를 이전하는것에 대한 가장 주된 이유이다.
+대학생때 hello world! 를 찍으며 시작했던 블로그이기 때문에 그당시 포스팅했던 많은 게시글은 정말 수준이 낮은 게시글이 대부분이다.
+블로그라고 부르기보단 당시에 안드로이드 어플을 처음 만들어보면서 발생했던 에러와 그 해결방법을 마구잡이로 포스팅했던 디버그 노트의 아카이브에 가깝다.
+그 밖에도 그냥 나중에 내가 보려고 대충 작성해놓은 글들이 대부분이기 때문에 구직할때라던가 대외적으로 노출해야할때는 조금 부끄러운 수준이라고 생각한다.</p>
+
+<hr />
+
+<h4 id="향후-계획">향후 계획</h4>
+
+<p>어쨋든간에 블로그를 이전하면서 새로운 마음으로 시작해보려 한다. 
+글을 자주자주 올리지는 못할거라고 생각하지만 하나의 게시글을 올리더라도 정성스럽게 쓰는게 최우선 계획이다.</p>
+
+      <div class="c-article__footer u-clearfix">
+        <div class="c-article__tag">
+          
+          <a href="/tags#블로그이전">&#35; 블로그이전</a>
+          
+          <a href="/tags#깃헙블로그">&#35; 깃헙블로그</a>
+          
+          <a href="/tags#티스토리">&#35; 티스토리</a>
+          
+          <a href="/tags#플러터">&#35; 플러터</a>
+          
+          <a href="/tags#개발자">&#35; 개발자</a>
+          
+        </div>
+        <div class="c-article__share">
+          <a href="https://twitter.com/intent/tweet?text=%EB%B8%94%EB%A1%9C%EA%B7%B8%20%EC%9D%B4%EC%A0%84%EA%B8%B0&url=http://localhost:4000/2022/07/03/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EC%A0%84%EA%B8%B0/" title="Share
+          on Twitter" rel="nofollow" target="_blank"><div data-icon='ei-sc-twitter' data-size='s'></div></a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2022/07/03/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EC%A0%84%EA%B8%B0/" title="Share on Facebook" rel="nofollow" target="_blank"><div data-icon='ei-sc-facebook' data-size='s'></div></a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2022/07/03/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EC%A0%84%EA%B8%B0/" title="Share on Google+" rel="nofollow" target="_blank"><div data-icon='ei-sc-google-plus' data-size='s'></div></a>
+        </div>
+      </div>
+      <div class="c-newsletter">
+  <div class="c-newsletter__header">
+    <h4 class="c-newsletter__title">Newsletter</h4>
+    <div class="c-newsletter__subtitle">Subscribe to this blog and receive notifications of new posts by email.</div>
   </div>
-</header> <!-- /.c-header -->
-<div class="c-posts o-opacity">
-  
-  <article class="c-post">
-    
-    <a class="c-post-thumbnail" style="background-image: url(/images/11.jpg)"
-      href="/2018/02/06/plan-your-day-from-the-evening/"></a>
-    
-    <div class="c-post-content">
-      <h2 class="c-post-title">
-        <a href="/2018/02/06/plan-your-day-from-the-evening/">Plan your day from the evening</a>
-      </h2>
-      <p>Migas cliche before they sold out cronut distillery hella, scenester cardigan kinfolk cornhole microdosing disrupt...</p>
-      <span class="c-post-date">2018, Feb 06&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-      <span class="c-post-words">4 minute read</span>
+  <form class="c-newsletter-form validate" action="#" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+    <div class="c-newsletter-form__group">
+      <label class="u-screen-reader-text" for="mce-EMAIL">Email address</label>
+      <input class="c-newsletter__email required email" id="mce-EMAIL" type="email" name="EMAIL" placeholder="Your email address" autocomplete="on">
+      <input class="c-newsletter__button" id="mc-embedded-subscribe" type="submit" name="subscribe" value="Subscribe">
     </div>
-  </article>
-  
-</div> <!-- /.c-posts -->
-<div class="c-categories" style="display: none;">
-  <ul class="c-categories__list u-lists-reset">
+  </form>
+</div> <!-- /.c-newsletter -->
+      <div class="c-recent-post">
+        <h4 class="c-recent__title">You might also enjoy</h4>
+        <div class="c-recent__box">
+        
+        
+          <div class="c-recent__item">
+            <a class="c-recent__image" href="/2018/03/02/style-guide/" style="background-image: url( /images/8.jpg)"></a>
+            <div class="c-recent__footer">
+              <h4><a href="/2018/03/02/style-guide/">Style Guide</a></h4>
+              <div class="c-recent__date">
+                <time datetime="2018-03-02T20:35:20+09:00">March 2, 2018</time>
+              </div>
+            </div>
+          </div>
+        
+        
+        
+          <div class="c-recent__item">
+            <a class="c-recent__image" href="/2018/02/08/where-I-rest-after-work/" style="background-image: url( /images/3.jpg)"></a>
+            <div class="c-recent__footer">
+              <h4><a href="/2018/02/08/where-I-rest-after-work/">Where I rest after work</a></h4>
+              <div class="c-recent__date">
+                <time datetime="2018-02-08T01:23:20+09:00">February 8, 2018</time>
+              </div>
+            </div>
+          </div>
+        
+        
+        
+          <div class="c-recent__item">
+            <a class="c-recent__image" href="/2018/02/08/how-to-organize-a-business-day/" style="background-image: url( /images/5.jpg)"></a>
+            <div class="c-recent__footer">
+              <h4><a href="/2018/02/08/how-to-organize-a-business-day/">How to organize a business day</a></h4>
+              <div class="c-recent__date">
+                <time datetime="2018-02-08T01:11:18+09:00">February 8, 2018</time>
+              </div>
+            </div>
+          </div>
+        
+        
+        
+          <div class="c-recent__item">
+            <a class="c-recent__image" href="/2018/02/08/does-minimalism-help-in-a-career/" style="background-image: url( /images/2.jpg)"></a>
+            <div class="c-recent__footer">
+              <h4><a href="/2018/02/08/does-minimalism-help-in-a-career/">Does minimalism help in a career?</a></h4>
+              <div class="c-recent__date">
+                <time datetime="2018-02-08T00:58:18+09:00">February 8, 2018</time>
+              </div>
+            </div>
+          </div>
+        
+        
+        </div>
+      </div> <!-- /.c-recent-post -->
       
-    <li class="c-categories__item">
+        <div class="c-comments">
+  <div id="disqus_thread" class="article-comments"></div>
+  <script>
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = '//mr-brown.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+</div> <!-- /.c-comments -->
       
-      <a class="c-categories__link" href="/category/books/">
-        
-        
-        
-        <div class="c-categories__img">
-          <figure style="background-image: url('/images/6.jpg');"></figure>
-          <span class="c-categories__more">View all</span>
-        </div>
-        
-        
-        <div class="c-categories__container ">
-          <h2 class="c-categories__header">books</h2>
-          <p class="c-categories__count"><span>1</span> Posts</p>
-        </div>
-      </a>
-    </li>
-    
-    <li class="c-categories__item">
-      
-      <a class="c-categories__link" href="/category/decoration/">
-        
-        
-        
-        <div class="c-categories__img">
-          <figure style="background-image: url('/images/10.jpg');"></figure>
-          <span class="c-categories__more">View all</span>
-        </div>
-        
-        
-        <div class="c-categories__container ">
-          <h2 class="c-categories__header">decoration</h2>
-          <p class="c-categories__count"><span>1</span> Posts</p>
-        </div>
-      </a>
-    </li>
-    
-    <li class="c-categories__item">
-      
-      <a class="c-categories__link" href="/category/else/">
-        
-        
-        
-        <div class="c-categories__img">
-          <figure style="background-image: url('/images/4.jpg');"></figure>
-          <span class="c-categories__more">View all</span>
-        </div>
-        
-        
-        <div class="c-categories__container ">
-          <h2 class="c-categories__header">else</h2>
-          <p class="c-categories__count"><span>1</span> Posts</p>
-        </div>
-      </a>
-    </li>
-    
-    <li class="c-categories__item">
-      
-      <a class="c-categories__link" href="/category/guide/">
-        
-        
-        
-        <div class="c-categories__img">
-          <figure style="background-image: url('/images/8.jpg');"></figure>
-          <span class="c-categories__more">View all</span>
-        </div>
-        
-        
-        <div class="c-categories__container ">
-          <h2 class="c-categories__header">guide</h2>
-          <p class="c-categories__count"><span>1</span> Posts</p>
-        </div>
-      </a>
-    </li>
-    
-    <li class="c-categories__item">
-      
-      <a class="c-categories__link" href="/category/jekyll/">
-        
-        
-        
-        <div class="c-categories__img">
-          <figure style="background-image: url('/images/12.jpg');"></figure>
-          <span class="c-categories__more">View all</span>
-        </div>
-        
-        
-        <div class="c-categories__container ">
-          <h2 class="c-categories__header">jekyll</h2>
-          <p class="c-categories__count"><span>1</span> Posts</p>
-        </div>
-      </a>
-    </li>
-    
-    <li class="c-categories__item">
-      
-      <a class="c-categories__link" href="/category/life/">
-        
-        
-        
-        <div class="c-categories__img">
-          <figure style="background-image: url('/images/11.jpg');"></figure>
-          <span class="c-categories__more">View all</span>
-        </div>
-        
-        
-        <div class="c-categories__container ">
-          <h2 class="c-categories__header">life</h2>
-          <p class="c-categories__count"><span>1</span> Posts</p>
-        </div>
-      </a>
-    </li>
-    
-    <li class="c-categories__item">
-      
-      <a class="c-categories__link" href="/category/minimalism/">
-        
-        
-        
-        <div class="c-categories__img">
-          <figure style="background-image: url('/images/2.jpg');"></figure>
-          <span class="c-categories__more">View all</span>
-        </div>
-        
-        
-        <div class="c-categories__container ">
-          <h2 class="c-categories__header">minimalism</h2>
-          <p class="c-categories__count"><span>1</span> Posts</p>
-        </div>
-      </a>
-    </li>
-    
-    <li class="c-categories__item">
-      
-      <a class="c-categories__link" href="/category/productivity/">
-        
-        
-        
-        <div class="c-categories__img">
-          <figure style="background-image: url('/images/5.jpg');"></figure>
-          <span class="c-categories__more">View all</span>
-        </div>
-        
-        
-        <div class="c-categories__container ">
-          <h2 class="c-categories__header">productivity</h2>
-          <p class="c-categories__count"><span>2</span> Posts</p>
-        </div>
-      </a>
-    </li>
-    
-    <li class="c-categories__item">
-      
-      <a class="c-categories__link" href="/category/rest/">
-        
-        
-        
-        <div class="c-categories__img">
-          <figure style="background-image: url('/images/3.jpg');"></figure>
-          <span class="c-categories__more">View all</span>
-        </div>
-        
-        
-        <div class="c-categories__container ">
-          <h2 class="c-categories__header">rest</h2>
-          <p class="c-categories__count"><span>1</span> Posts</p>
-        </div>
-      </a>
-    </li>
-    
-  </ul>
-</div> <!-- ./c-categories -->
+    </div> <!-- /.c-wrap-content -->
+  </div> <!-- /.c-article__content -->
+</article> <!-- /.c-article-page -->
+
 </main> <!-- /.c-content -->
   </div> <!-- /.o-wrapper -->
   <div class="c-top" data-icon='ei-chevron-up' data-size='s' title="Scroll To Top"></div> <!-- /.c-top -->
