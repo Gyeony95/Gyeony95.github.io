@@ -1,9 +1,9 @@
 <div class="c-posts o-opacity">
     {% for post in site.categories[page.title] %}
     <article class="c-post">
-<!--        {% if post.image %}-->
-<!--        <a class="c-post-thumbnail o-opacity" style="background-image: url({{ prepend: site.baseurl | append : post.image}})"-->
-<!--        href="{{post.url | prepend: site.baseurl}}"></a>-->
+        {% if post.image %}
+        <a class="c-post-thumbnail o-opacity" style="background-image: url({{"/images/" | prepend: site.baseurl | append : post.image}})"
+        href="{{post.url | prepend: site.baseurl}}"></a>
         {% else %} {% endif %}
         <div class="c-post-content">
             <h2 class="c-post-title">
