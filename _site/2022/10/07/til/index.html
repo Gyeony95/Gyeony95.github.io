@@ -5,9 +5,9 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-  <title>내 맘대로 클린코드 리뷰 01. 깨끗한 코드</title>
-  <meta name='description' content="사람이라면 다들 한번씩 아.. 해야하는데.. 라고 생각만하고 실천은 하지 못한 경험이 있을것이다. (설마 나만..?)나에게도 그런 마음의 짐이 몇가지가 있는데 그중 하나가 바로 ‘클린코드’ 읽기이다. 마침 회사 일정도 나름 여유롭기도 하고 더 늦기전에 독파를 하고싶어서 이번기회에 ...">
-  <link rel='canonical' href="http://localhost:4000/2022/07/28/clean-code-01/">
+  <title>TIL 221007</title>
+  <meta name='description' content="📚 TIL">
+  <link rel='canonical' href="http://localhost:4000/2022/10/07/til/">
   <link rel='alternate' type='application/rss+xml' title='Henry의 블로그에 오신것을 환영합니다!' href="http://localhost:4000/feed.xml">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Volkhov:400,700" rel="stylesheet">
@@ -96,83 +96,60 @@
     
     <div class="c-wrap-content">
       <header class="c-article__header">
-        <h1 class="c-article__title">내 맘대로 클린코드 리뷰 01. 깨끗한 코드</h1>
+        <h1 class="c-article__title">TIL 221007</h1>
         <div class="c-article__date">
-          <span>2022, Jul 28</span>
+          <span>2022, Oct 07</span>
         </div>
       </header>
-      <p>사람이라면 다들 한번씩 아.. 해야하는데.. 라고 생각만하고 실천은 하지 못한 경험이 있을것이다. (설마 나만..?)<br />
-나에게도 그런 마음의 짐이 몇가지가 있는데 그중 하나가 바로 ‘클린코드’ 읽기이다. 마침 회사 일정도 나름 여유롭기도 하고 더 늦기전에 독파를 하고싶어서 
-이번기회에 간단히 리뷰(라고 쓰고 요약)를 해보려고 한다.</p>
+      <h4 id="-til">📚 TIL</h4>
 
-<p>첫번째 장에서는 깨끗한 코드가 얼마나 중요한지에 대해 설명해준다. 물론 코드가 깨끗해야 한다는것은 누구나 알고있지만 필자의 경우 한번씩 ‘아.. 이 정도는 괜찮겠지?’
-하는 자기합리화에 빠져 코드르 오염시키는 경우가 있기에 상당히 찔리는 부분이었다. 앞으로 이 책을 읽으면서 여러모로 반성을 하게 될거같은 느낌이 들었다.</p>
+<p>노마드코더 채널에서 개발자 한달 스터디를 진행을 합니다. 저는 여기서 글쓰기 스터디 모임에 참가하고 있어요<br />
+원래는 스스로에게 너무 부담을 주지않기 위해 TIL을 안하는 주의였는데 스터디에 참여하시는 분들 중에 TIL을 적극적으로 하시는 분이 있더라구요<br />
+자유로운 형식으로 꼭 공부 얘기가 아니더라도 하루동안 있었던 일들을 기록하는데 이런 형식이면 나쁘지 않겠더라구요 ㅎㅎ<br />
+그래서 전에 만들어두고 방치해놓은 github.io 페이지에서 TIL을 진행해보려고 합니다.</p>
 
 <hr />
 
-<h4 id="코드가-존재하리라">코드가 존재하리라</h4>
+<h4 id="-글쓰기-스터디">✍ 글쓰기 스터디</h4>
+<p>지금 진행하고있는 글쓰기 주제는 Flutter Flame 게임엔진을 통한 게임 에제 만들기에요<br />
+https://rlg1133.tistory.com/138<br />
+위 주소에서 지난주 작성한 글을 확인할 수 있고 이번주에 글을 쓰기위해 프로젝트를 약간 진행했어요<br />
+매주 잘 할 수 있을지 모르겠지만 열심히 해보려 합니다.</p>
 
-<p>최근 AI가 코드를 대신 짜주는 세상이 왔다. github의 Code Pilot 과 같이 간단한 명령으로 가벼운 모델을 만들어주는 기술은 이미 세상에 나왔다.
-하지만 그렇다고 나는 진짜 개발자를 완벽히 대체할 AI가 나온다고는 생각하지 않는다. 이 책에도 비슷한 생각을 가지고 문단이 시작된다.<br />
-모든 프로그램에는 요구사항이 있고 그 요구사항을 표현하는것이 코드인데 시키는대로 돌아가는것이 아닌 원하는대로 돌아가는 기계는 절대 있을 수 없고
-인간의 정밀한 표현을 기계가 따라할수는 없다는 것이다.<br />
-물론 세상은 빠르게 발전하고있고 과거에는 사람을 바둑으로 이기는 유명한 AI 알파고가 나올거라고 생각했던 사람은 소수였을것이다.<br />
-하지만 19 x 19 의 작은 판 위에서 벌어지는 명확한 규칙을 가진 게임과 고객의 감성과 니즈, 기업의 요구 가치 등을 다루는 응용 프로그래밍은 
-완전히 규모가 다른 문제이기 때문에 만에 하나 그런일이 생긴다고 하면 개발자들은 모두
-실직해야겠지만 나는 내가 은퇴할때까지는 그럴일이 없을거라고 생각한다.</p>
+<hr />
 
-<h4 id="나쁜코드">나쁜코드</h4>
+<h4 id="-사이드-프로젝트">💻 사이드 프로젝트</h4>
+<p>원래 사이드 프로젝트로 시작했지만 규모가 너무 크고 사실상 한 기업체의 어플을 만들어주고 있는 ㅎㅎ,,<br />
+방탈출 관련된 어플을 만들고있고 이제는 법인까지 생겨버렸어요<br />
+매주 어느정도 진행을 하고있지만 진행이 더뎌서 언제 출시를 하게 될지는 모르겠네요<br />
+이번주는 새로오신 PM분이 요청해주신 피그마에 올라온 진행상황 체크 및 IA 추가 작성을 해야될거같아요<br />
+개발을 빨리 진행해야 할텐데 좀 걱정이 크네요</p>
 
-<p>본 책에서는 한 솔루션을 제공하는 회사가 망한 히스토리를 에시로 들며 시작한다. 유망했던 한 회사는 나쁜 코드로 인해 오류와 낮은생산성 등 고초를 겪다가 망했다고 말이다.
-또한 생산성과 시간 그래프를 보여주는데 시간이 지날수록 가파르게 줄어들며 0에 수렴하는 그래프이다.<br />
-지금은 나도 회사에서 수시로 리팩토링을 진행하고 코드를 관리하고 있지만 예전에 첫 취직했을때는 나에게는 사수도 없었고 
-솔직히 새로운 툴과 언어에 익숙해지고 눈앞의 새 기능을 구현하는데에만 급급했다. 
-약 1년정도를 다니다가 퇴사를 했는데 그 떄 당시에는 퇴사전에 나름대로 Bloc를 상위버전으로 마이그레이션 하고 코드도 정리를 했다고 생각했지만 
-지금 생각해보면 개선할 점이 훨씬 더 많았을텐데 아쉬움이 남긴한다..<br />
-나의 길지 않은 개발 경험으로 비추어 봐도 이 책에서 말하는 현실과 타협하고 나쁜코드를 남겨놓는 부분에 대해 공감이 많이 간다. 
-그렇다는 얘기는 앞으로도 비슷한 상황이 많이 있을테고 그때마다 조금씩 양보하다가는 생산성 저하에 이르게 된다는 의미가 될텐데 
-그러지 않으려면 나도 항상 깔끔한 코드를 유지하는 습관을 들여야겠다.(사실 지금도 그러려고 하지만 나중에 보면 더 나은 방법이 있지 않았을까 하는생각이 자주 든다.)</p>
+<hr />
 
-<h4 id="태도">태도</h4>
+<h4 id="-스픽">💬 스픽</h4>
+<p>예전부터 개발자에게 가장 필요한 언어는 영어라고 생각해왔어요<br />
+그런데 제가 영어를 그렇게 잘하진 못해서 스피킹 연습을 위해 스픽이라는 어플을 구독하고있습니다 ㅋㅋㅋ<br />
+매일매일 100문장 이상씩 말하는 중이고 언젠간 회화 실력이 늘었으면 하네요</p>
 
-<p>위와 같이 나쁜 코드를 통해 그 업보를 정통으로 맞게되면 그 책임은 사실 개발자에게 있다고 한다. 직장 상사가 일정 고려없이 현실성없는 기한을 맞추라며 지시를 해도 
-전문가로서 좋은코드를 사수하지 못했기 때문이라고 하는데 솔직히 이게 말처럼 쉽지는 않은거같다. 개발을 하다보면 일정에 맞춰서 끝내는게 정말 어렵다. 업무를 주는 사람은 
-빠른 개발 및 출시를 원하고 개발자는 많은 사이트이펙을 고려하며 기존의 코드를 깔끔하게 유지하기를 원해 기간을 더 가져가길 원한다. 이러한 조율에 실패해 
-나쁜코드를 가져가게 되는것을 잘못이라고 한다면 물론 잘못이라고 할 수는 있겠으나 개인적으로 이런건 좋은 관리자를 만났는가에 대한 부분으로 이어져야 하는 논쟁같아 
-무턱대고 동의 하기는 어려운것 같다.</p>
+<hr />
 
-<h4 id="깨끗한-코드란">깨끗한 코드란?</h4>
-
-<p>바야네 스트롭스트룹, 그래디 부치, 빅 데이브 토마스 등 나는 살면서 처음들어보지만 많은사람들이 알고있는 유명한 인사들의 인터뷰 내용이 있다. 
-그 내용들을 요약해서 적어보자면 아래와 같다.</p>
-<ol>
-  <li>우아하고 효율적인 코드가 좋다. 논리가 간단해야 버그가 숨어들지 못한다. 꺠끗한 코드는 한가지를 제대로 한다.</li>
-  <li>깨끗한 코드는 잘 쓴 문장처럼 읽히며, 설계자의 의도를 숨기지 않는다.</li>
-  <li>특정 목적을 달성하는 방법은 하나만 제공한다.</li>
-  <li>깨끗한 코드는 누군가 주의 깊게 짯다는 느낌이 들고 고치려 하다보면 제자리이다.</li>
-  <li>중복을 피해라, 한 기능만 수행하라, 제대로 표현하라, 작게 추상화 하라.</li>
-</ol>
-
-<p>이론상 간단하다. 하나의 기능을 하나의 함수가 수행하게 하며, 그 내용은 중복되지 말아야하고 네이밍을 잘 표현해야 한다.<br />
-코드를 읽으면서 짐작했던 곳에서 짐작했던 기능을 정화히 수행하면 되는것이다.</p>
-
-<h4 id="우리들저자의-생각">우리들(저자)의 생각</h4>
-
-<p>이 책에서는 깨끗한 변수 이름, 깨끗한 함수, 깨끗한 클래스를 만드는 방법을 소개한다. 이 책의 가이드를 따르다 보면 적어도 자신의 주관을 가진 수준 높은 코드를 
-작성할 수 있다고 한다. 물론 이것들이 절대적으로 옳은게 아니지만 내가 코드의 저자로서 내 코드를 읽는 독자들에게 부끄럽지 않게할 정도의 수준은 만들 수 있다고 생각한다.</p>
-
+<h4 id="-남기고-싶은-말">💤 남기고 싶은 말</h4>
+<p>요즘 운동을 너무 게을리 하는거같아요<br />
+주에 4번은 나가야 하는데 그러지 못하고 있네요 ㅜㅜ 오늘도 집밖에 나가지 않았습니다,,!<br />
+아무튼 요즘 나태해지는듯 한데 TIL도 시작했겠다 더 열심히 살아보겠습니다!</p>
 
       <div class="c-article__footer u-clearfix">
         <div class="c-article__tag">
           
-          <a href="/tags#cleanCode">&#35; cleanCode</a>
+          <a href="/tags#TIL">&#35; TIL</a>
           
         </div>
         <div class="c-article__share">
-          <a href="https://twitter.com/intent/tweet?text=%EB%82%B4%20%EB%A7%98%EB%8C%80%EB%A1%9C%20%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C%20%EB%A6%AC%EB%B7%B0%2001.%20%EA%B9%A8%EB%81%97%ED%95%9C%20%EC%BD%94%EB%93%9C&url=http://localhost:4000/2022/07/28/clean-code-01/" title="Share
+          <a href="https://twitter.com/intent/tweet?text=TIL%20221007&url=http://localhost:4000/2022/10/07/til/" title="Share
           on Twitter" rel="nofollow" target="_blank"><div data-icon='ei-sc-twitter' data-size='s'></div></a>
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2022/07/28/clean-code-01/" title="Share on Facebook" rel="nofollow" target="_blank"><div data-icon='ei-sc-facebook' data-size='s'></div></a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/2022/07/28/clean-code-01/" title="Share on Google+" rel="nofollow" target="_blank"><div data-icon='ei-sc-google-plus' data-size='s'></div></a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2022/10/07/til/" title="Share on Facebook" rel="nofollow" target="_blank"><div data-icon='ei-sc-facebook' data-size='s'></div></a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2022/10/07/til/" title="Share on Google+" rel="nofollow" target="_blank"><div data-icon='ei-sc-google-plus' data-size='s'></div></a>
         </div>
       </div>
       <div class="c-newsletter">
@@ -194,30 +171,6 @@
         
         
           <div class="c-recent__item">
-            <a class="c-recent__image" href="/2022/07/28/flutter-anatomy-01/" style="background-image: url( /images/flutter_logo.png)"></a>
-            <div class="c-recent__footer">
-              <h4><a href="/2022/07/28/flutter-anatomy-01/">플러터 해부학 01. 플러터 애니메이션을 파헤쳐보자!</a></h4>
-              <div class="c-recent__date">
-                <time datetime="2022-07-28T00:00:00+09:00">July 28, 2022</time>
-              </div>
-            </div>
-          </div>
-        
-        
-        
-          <div class="c-recent__item">
-            <a class="c-recent__image" href="/2022/07/03/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EC%A0%84%EA%B8%B0/" style="background-image: url( /images/4.jpg)"></a>
-            <div class="c-recent__footer">
-              <h4><a href="/2022/07/03/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EC%A0%84%EA%B8%B0/">블로그 이전기</a></h4>
-              <div class="c-recent__date">
-                <time datetime="2022-07-03T00:00:00+09:00">July 3, 2022</time>
-              </div>
-            </div>
-          </div>
-        
-        
-        
-          <div class="c-recent__item">
             <a class="c-recent__image" href="/2018/03/02/style-guide/" style="background-image: url( /images/8.jpg)"></a>
             <div class="c-recent__footer">
               <h4><a href="/2018/03/02/style-guide/">Style Guide</a></h4>
@@ -235,6 +188,30 @@
               <h4><a href="/2018/02/08/where-I-rest-after-work/">Where I rest after work</a></h4>
               <div class="c-recent__date">
                 <time datetime="2018-02-08T01:23:20+09:00">February 8, 2018</time>
+              </div>
+            </div>
+          </div>
+        
+        
+        
+          <div class="c-recent__item">
+            <a class="c-recent__image" href="/2018/02/08/how-to-organize-a-business-day/" style="background-image: url( /images/5.jpg)"></a>
+            <div class="c-recent__footer">
+              <h4><a href="/2018/02/08/how-to-organize-a-business-day/">How to organize a business day</a></h4>
+              <div class="c-recent__date">
+                <time datetime="2018-02-08T01:11:18+09:00">February 8, 2018</time>
+              </div>
+            </div>
+          </div>
+        
+        
+        
+          <div class="c-recent__item">
+            <a class="c-recent__image" href="/2018/02/08/does-minimalism-help-in-a-career/" style="background-image: url( /images/2.jpg)"></a>
+            <div class="c-recent__footer">
+              <h4><a href="/2018/02/08/does-minimalism-help-in-a-career/">Does minimalism help in a career?</a></h4>
+              <div class="c-recent__date">
+                <time datetime="2018-02-08T00:58:18+09:00">February 8, 2018</time>
               </div>
             </div>
           </div>
